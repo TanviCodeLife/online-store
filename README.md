@@ -33,14 +33,10 @@ Gap's online store clone using Angular.
 ---
 ## Setup on OSX <a name="setup"></a>
 
-* Install Node.js
-* Install karma-cli globally: `npm install -g karma-cli`
+* Install Node.js.
+* Install Angular CLI 1.6.5.
 * Go to GitHub profile and clone the repo from [Doctor Lookup](https://github.com/TanviCodeLife/doctor-lookup.git). Use `git clone <project url>` command to pull it to a local repository in your Home directory.
-*  Navigate to root of project directory
-* `npm install` to install dependencies
-* `npm run start` to build and start the dev server
-* `npm run lint` to explicitly run ESLint
-* `npm test` to run the unit tests with Karma and Jasmine. Visit `localhost:9876` to view the tests.
+* Run `npm install` from project directory.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
 
