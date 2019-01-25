@@ -35,10 +35,10 @@ Gap's online store clone using Angular.
 
 * Install Node.js.
 * Install Angular CLI 1.6.5.
-* Go to GitHub profile and clone the repo from [Doctor Lookup](https://github.com/TanviCodeLife/doctor-lookup.git). Use `git clone <project url>` command to pull it to a local repository in your Home directory.
+* Go to GitHub profile and clone the repo from [Gap Online Clone](https://github.com/TanviCodeLife/online-store.git). Use `git clone <project url>` command to pull it to a local repository in your Home directory.
 * Run `npm install` from project directory.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
+### This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
 
 ### Development server
 
