@@ -4,7 +4,7 @@
 
   ---
 ## Description
-An e-commerce website using Angular.
+Gap's online store clone using Angular.
 
   ---
 ## Table of Contents
@@ -17,13 +17,18 @@ An e-commerce website using Angular.
   ---
 ## Specifications <a name="specs-work"></a>
 
-| Behavior | Input | Output |
-|----------|-------|--------|
-|  Program takes a user's medical issue and recieve a list of doctors in Portland, OR area | User Input: Flu | List of Doctors that treat the User Input Medical Issue |
-|   Program takes a user's input for a doctor name to receive a list of doctors in the Portland area that fit the search query| User Input: "SomeName" | A valid List Of Doctors is returned with information included about each doctor: first name, last name, address, phone number, website and whether or not the doctor is accepting new patients  |
-| Program takes a user's input for a doctor name and if query response doesn't include any doctors, then user should recieve a notification  hat states that no doctors meet the criteria.| User Input: "SomeName"  | "No Doctors available with SomeName in Portland, OR area" |
-| Program's API call for a user query results in an error (any message not a 200 OK), the application should return a notification to user that states what the error is.|  User Query: Doctor Name | "There was an error processing your request"|
-| Program's API call for a user query results in an error (any message not a 200 OK), the application should return a notification to user that states what the error is.|  User Query: "Flu" | "There was an error processing your request"|
+| Behavior (Customer)|  
+|----------|
+|  User should be able to see landing page  with navigation options and pictures |
+|  User should be able to navigate to a page category to view items available for purchase |
+|  User should be able to navigate to a view selected items details |
+|  User should be able to add selected items to their cart |
+
+| Behavior (Admin)|  
+|----------|
+|  User should be able to see landing page with option to go to admin view|
+|  User should be able to navigate to page with options to add or remove  items for sale |
+
 
 ---
 ## Setup on OSX <a name="setup"></a>
