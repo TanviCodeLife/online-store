@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { routing } from './app.routing';
 import { BsNavbarComponent } from './bs-navbar/bs-navbar.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+//import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     FormsModule,
     HttpModule,
     routing,
-    NgbModule.forRoot()
+    //NgbModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
