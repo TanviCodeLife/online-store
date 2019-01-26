@@ -8,10 +8,10 @@
           {{product.price | currency}}  <br>
           {{product.quantity}} left <br>
           <span *ngIf="product.message">
-            {{keg.message}}
+            {{product.message}}
           </span><br>
         </p>
-        <button (click)="showProductEditForm(product)">Edit Keg</button>
+        <button (click)="showProductEditForm(product)">Edit Product</button>
       </div>
     </div>
   </li>
