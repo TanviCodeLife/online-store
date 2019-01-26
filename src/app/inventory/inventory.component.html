@@ -1,0 +1,18 @@
+<ul>
+  <li *ngFor="let product of childAllProducts">
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">{{product.itemName}}</h5>
+        <p class="card-text">
+          {{product.type}} <br>
+          {{product.price | currency}}  <br>
+          {{product.quantity}} left <br>
+          <span *ngIf="product.message">
+            {{keg.message}}
+          </span><br>
+        </p>
+        <button (click)="showProductForm(product)">Edit Keg</button>
+      </div>
+    </div>
+  </li>
+</ul>

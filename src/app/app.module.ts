@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { routing } from './app.routing';
 import { BsNavbarComponent } from './bs-navbar/bs-navbar.component';
+import { InventoryComponent } from './inventory/inventory.component';
 //import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
-    BsNavbarComponent
+    BsNavbarComponent,
+    InventoryComponent
   ],
   imports: [
     BrowserModule,
