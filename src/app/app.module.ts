@@ -7,6 +7,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { routing } from './app.routing';
 import { BsNavbarComponent } from './bs-navbar/bs-navbar.component';
 import { InventoryComponent } from './inventory/inventory.component';
+import { AdminEditComponent } from './admin-edit/admin-edit.component';
 //import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
@@ -14,7 +15,8 @@ import { InventoryComponent } from './inventory/inventory.component';
     AppComponent,
     HomePageComponent,
     BsNavbarComponent,
-    InventoryComponent
+    InventoryComponent,
+    AdminEditComponent
   ],
   imports: [
     BrowserModule,

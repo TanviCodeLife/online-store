@@ -14,7 +14,7 @@ export class InventoryComponent {
   constructor() { }
 
 
-  showEditForm(productToEdit: Product){
+  showProductEditForm(productToEdit: Product){
    this.clickSender.emit(productToEdit);
  }
 

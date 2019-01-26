@@ -16,7 +16,7 @@ export class AppComponent {
    new Product("Tiered Ruffled Blouse", "Shirts", 49.95, 4)
  ];
 
- showProductForm(){
+ showProductEditForm(){
   this.productEditForm = true;
 }
 }
