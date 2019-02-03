@@ -26,7 +26,7 @@ const appRoutes: Routes = [
   {
     path: 'checkout',
     component: CheckoutComponent,
-    canActivate: [ AuthGuardService ]
+    canActivate: [AuthGuardService]
   },
   {
     path: 'order-success',

@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Product } from './models/product.model';
+import { AuthenticationService } from './authentication.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -8,15 +10,13 @@ import { Product } from './models/product.model';
 })
 export class AppComponent {
  title = 'Gap';
- productEditForm = false;
- masterAllProducts: Product[] = [
-   new Product('Mid Rise True Skinny Jeans', 'Jeans', 69.95, 20),
-   new Product('Mid Rise True Skinny Jeans with Raw Hem', 'Jeans', 80.95, 12),
-   new Product('Long Sleeve Shirred Blouse', 'Shirts', 59.95, 20),
-   new Product('Tiered Ruffled Blouse', 'Shirts', 49.95, 4)
- ];
 
- showProductEditForm() {
-  this.productEditForm = true;
-}
+  constructor(private authService: AuthenticationService, router: Router) {
+    authService.user$.subscribe(user => {
+      if (user) {
+        const returnUrl = localStorage.getItem('returnUrl');
+        router.navigateByUrl(returnUrl);
+      }
+    });
+  }
 }

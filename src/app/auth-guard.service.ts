@@ -12,11 +12,12 @@ export class AuthGuardService implements CanActivate {
 
   constructor(private authService: AuthenticationService, private router: Router) { }
 
-  canActivate() {
+  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
     return this.authService.user$.map(user => {
-      if (user) return true;
+      if (user) { return true; }
 
-      this.router.navigate(['/login']);
+      this.router.navigate(['/login'], { queryParams: { returnUrl: state.url}});
+      // redirect to login and navigate user into the original protected route after they login
       return false;
     });
   }
