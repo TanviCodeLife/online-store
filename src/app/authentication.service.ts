@@ -8,7 +8,7 @@ import * as firebase from 'firebase/app';
 export class AuthenticationService {
   user$: Observable<firebase.User>;
 
-  constructor(public afAuth: AngularFireAuth) {
+  constructor(private afAuth: AngularFireAuth) {
     this.user$ = afAuth.authState;
    }
 
