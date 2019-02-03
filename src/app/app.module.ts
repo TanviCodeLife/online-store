@@ -18,6 +18,8 @@ import { CheckoutComponent } from './checkout/checkout.component';
 
 import { AuthenticationService } from './authentication.service';
 import { AuthGuardService } from './auth-guard.service';
+import { ProductsComponent } from './products/products.component';
+import { OrderSuccessComponent } from './order-success/order-success.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -33,7 +35,9 @@ export const firebaseConfig = {
     HomePageComponent,
     BsNavbarComponent,
     LoginComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    ProductsComponent,
+    OrderSuccessComponent
   ],
   imports: [
     BrowserModule,

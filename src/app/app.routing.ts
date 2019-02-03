@@ -1,9 +1,14 @@
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { importType } from '@angular/compiler/src/output/output_ast';
+
 import { HomePageComponent } from './home-page/home-page.component';
 import { LoginComponent } from './login/login.component';
-import { importType } from '@angular/compiler/src/output/output_ast';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { ProductsComponent } from './products/products.component';
+import { OrderSuccessComponent } from './order-success/order-success.component';
+
+import { AuthGuardService } from './auth-guard.service';
 
 const appRoutes: Routes = [
   {
@@ -15,8 +20,18 @@ const appRoutes: Routes = [
     component: LoginComponent
   },
   {
+    path: 'products',
+    component: ProductsComponent
+  },
+  {
     path: 'checkout',
-    component: CheckoutComponent
+    component: CheckoutComponent,
+    canActivate: [ AuthGuardService ]
+  },
+  {
+    path: 'order-success',
+    component: OrderSuccessComponent,
+    canActivate: [AuthGuardService]
   }
 ];
 
