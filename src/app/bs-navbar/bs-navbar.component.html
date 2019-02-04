@@ -25,15 +25,17 @@
           <a class="nav-link" routerLink="/login">Login</a>
         </li>
       </ng-template>
-      <li ngbDropdown *ngIf="authService.user$ | async as user; else anonymousUser" class="nav-item dropdown"> 
+      <li ngbDropdown *ngIf="appUser; else anonymousUser" class="nav-item dropdown"> 
         <a ngbDropdownToggle class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false">
-          {{ user.displayName }}
+          {{ appUser.name }}
         </a>
         <div ngbDropdownMenu class="dropdown-menu show" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">My Orders</a>
-          <a class="dropdown-item" href="#">Manage Orders</a>
-          <a class="dropdown-item" href="#">Manage Products</a>
+          <a class="dropdown-item" href="/my/orders">My Orders</a>
+          <ng-container *ngIf="user.isAdmin">
+          <a class="dropdown-item" href="/admin/orders">Manage Orders</a>
+          <a class="dropdown-item" href="/admin/products">Manage Products</a>
+          <ng-container>
           <a class="dropdown-item" (click)="logout()">Log Out</a>
         </div>
       </li>

@@ -17,10 +17,13 @@ import { LoginComponent } from './login/login.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { ProductsComponent } from './products/products.component';
 import { OrderSuccessComponent } from './order-success/order-success.component';
+import { AdminOrdersComponent } from './admin/admin-orders/admin-orders.component';
+import { AdminProductsComponent } from './admin/admin-products/admin-products.component';
 
 import { AuthenticationService } from './authentication.service';
 import { AuthGuardService } from './auth-guard.service';
 import { UserService } from './user.service';
+import { AdminAuthGuardService } from './admin-auth-guard.service';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -38,7 +41,9 @@ export const firebaseConfig = {
     LoginComponent,
     CheckoutComponent,
     ProductsComponent,
-    OrderSuccessComponent
+    OrderSuccessComponent,
+    AdminOrdersComponent,
+    AdminProductsComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +55,7 @@ export const firebaseConfig = {
     AngularFireAuthModule,
     AngularFireDatabaseModule
   ],
-  providers: [AuthenticationService, AuthGuardService, UserService],
+  providers: [AuthenticationService, AuthGuardService, UserService, AdminAuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
