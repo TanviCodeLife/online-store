@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from '../authentication.service';
-import { AppUser } from '../models/app-user';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-bs-navbar',
@@ -9,9 +8,9 @@ import { AppUser } from '../models/app-user';
   providers: [AuthenticationService]
 })
 export class BsNavbarComponent implements OnInit {
-  appUser: AppUser;
-  constructor(public authService: AuthenticationService) {
-    authService.appUser$.subscribe(appUser => this.appUser = appUser);
+
+  constructor(private authService: AuthenticationService) {
+
    }
 
   ngOnInit() {

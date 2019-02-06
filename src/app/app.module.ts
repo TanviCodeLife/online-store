@@ -1,3 +1,7 @@
+import { UserService } from './user.service';
+import { AuthGuardService } from './auth-guard.service';
+import { AuthenticationService } from './authentication.service';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -20,10 +24,6 @@ import { OrderSuccessComponent } from './order-success/order-success.component';
 import { AdminOrdersComponent } from './admin/admin-orders/admin-orders.component';
 import { AdminProductsComponent } from './admin/admin-products/admin-products.component';
 
-import { AuthenticationService } from './authentication.service';
-import { AuthGuardService } from './auth-guard.service';
-import { UserService } from './user.service';
-import { AdminAuthGuardService } from './admin-auth-guard.service';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -55,7 +55,7 @@ export const firebaseConfig = {
     AngularFireAuthModule,
     AngularFireDatabaseModule
   ],
-  providers: [AuthenticationService, AuthGuardService, UserService, AdminAuthGuardService],
+  providers: [AuthenticationService, AuthGuardService, UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
